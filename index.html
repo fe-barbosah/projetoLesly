@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Para mi Princesa Lesly</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+	
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*PARA MI QUERIDA Y AMADA LESLY</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			¡Hola Lesly!<br />
+			¿Recuerdas el día en que nos conocimos?<br />
+			<span class="comments">// Domingo 20 de Abril de 2025</span><br />
+			Desde ese día se encendió una llama;<br />
+			<span class="comments">// En aquel primer encuentro, tu dulce voz, tu risa, tu forma de comunicarte y de ser, quedaron grabados en mi mente;<br />
+			Y conforme pasó el tiempo, mi percepción de amor por ti solo aumentaba;<br />
+			Cada día de conversación, nuestra conexión crecía y sentía que viviríamos algo más que solo eso;<br />
+			Sé que actualmente tenemos un compromiso, y tenemos nuestras limitaciones por la distancia;<br />
+			Pero quería recordarte, que te amo, y si estoy aquí contigo es porque contigo quiero estar y casarme!;<br />
+			Habrá luchas, pero tengo que recordarte ;<br />
+			<span class="comments">// Nuestro amor es como el mar, es grande, fuerte, y aunque tiene olas que vienen y van, ¡nunca se seca!</span><br />
+			Que DIOS nos bendiga, y que por fin llegue el día en que vivamos en nuestro hogar;<br />
+			<span class="comments">// Sé que no es fácil, ¡pero creo en nosotros dos!</span><br />
+			<span class="comments">// Espero que te guste este pequeño regalo, ¡prometo que haré más de ahora en adelante!</span><br />
+			<br>
+			<br>
+			Todo lo que quiero decirte hoy es:<br />
+			¡Lesly, te amo y te amaré para siempre! ¡Y no puedo esperar al día en que te abrace!;<br />
+			<br>
+			<br>
+			Me gustaría que tuviéramos fotos juntos, pero aún no es posible, así que siente mi amor a través de esta foto de nosotros jugando juntos: <br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Nosotros Tiempo Juntos:
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					TE AMO MUCHO MI BB<br/>
+					<div class="signature">- Felipinho</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2016, 8, 5);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
